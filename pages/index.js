@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -9,7 +10,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main></main>
+      <main>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <Link href={'/posts'}>Posts</Link>
+          <Link href={'/posts/first-post'}>First Post</Link>
+        </div>
+      </main>
 
       <footer></footer>
 
