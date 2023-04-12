@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import { getSortedPostsData } from '../../lib/posts';
 import utilStyles from '../../styles/utils.module.css';
-import Date from '../../components/date';
+import Date from '../../components/Date';
 
 const Posts = ({ allPostsData }) => {
   return (
