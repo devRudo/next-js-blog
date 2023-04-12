@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import Layout from '../../components/Layout';
+import Layout from '../../components/layout';
 import { getSortedPostsData } from '../../lib/posts';
 import utilStyles from '../../styles/utils.module.css';
-import Date from '../../components/Date';
+import Date from '../../components/date';
 
 const Posts = ({ allPostsData }) => {
   return (
