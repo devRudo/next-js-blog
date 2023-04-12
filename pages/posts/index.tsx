@@ -4,8 +4,17 @@ import Layout from '../../components/layout';
 import { getSortedPostsData } from '../../lib/posts';
 import utilStyles from '../../styles/utils.module.css';
 import Date from '../../components/date';
+import { GetStaticProps } from 'next';
 
-const Posts = ({ allPostsData }) => {
+const Posts = ({
+  allPostsData,
+}: {
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+  }[];
+}) => {
   return (
     <Layout>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -28,11 +37,11 @@ const Posts = ({ allPostsData }) => {
 
 export default Posts;
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
   };
-}
+};
